@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Чистий Нектар — Мед та продукти бджільництва</title>
+  <meta name="description" content="Натуральний мед, прополіс, перга від бджолярів. Доставка по Україні." />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background-color: #fdf9f0;
+    }
+
+    header {
+      background: linear-gradient(135deg, #f9a825, #f57c00);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav {
+      background-color: #4e342e;
+      padding: 1rem 0;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      color: white;
+      padding: 0.7rem 1.3rem;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 5px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #3e2723;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 3rem;
+      background: url('https://images.unsplash.com/photo-1607637723527-30116456725c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+      background-size: cover;
+      height: 350px;
+      position: relative;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1.5rem;
+    }
+
+    .product-info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #4e342e;
+    }
+
+    .product-info p {
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #f57c00;
+      font-size: 1.2rem;
+    }
+
+    button {
+      background-color: #f9a825;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 500;
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #f57c00;
+    }
+
+    .about, .contact, .delivery {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 3rem;
+    }
+
+    .contact-form {
+      margin-top: 1.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .contact-form textarea {
+      height: 120px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      background-color: #4e342e;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .hero {
+        height: 300px;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍯 Чистий Нектар</h1>
+    <p>Натуральні продукти бджільництва від бджолярів для здоров'я</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Головна</a></li>
+      <li><a href="#products">Продукти</a></li>
+      <li><a href="#about">Про нас</a></li>
+      <li><a href="#contact">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h2>Насолоджуйтесь дарунками природи</h2>
+        <p>Свіжий мед, прополіс, перга та інші натуральні продукти від здорових бджіл</p>
+      </div>
+    </section>
+
+    <section id="products">
+      <h2 style="text-align: center; margin-bottom: 2rem; color: #4e342e;">Наші продукти</h2>
+      <div class="products">
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Липовий мед">
+          <div class="product-info">
+            <h3>Липовий мед</h3>
+            <p>Ароматний, заспокійливий, ідеальний для імунітету та сну.</p>
+            <p class="price">220 ₴ / 500 г</p>
+            <button onclick="openOrderForm('Липовий мед')">Купити</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1593854824309-86328722312a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Прополіс">
+          <div class="product-info">
+            <h3>Прополіс (сирой)</h3>
+            <p>Природний антибіотик. Зміцнює імунітет та допомагає при простуді.</p>
+            <p class="price">180 ₴ / 50 г</p>
+            <button onclick="openOrderForm('Прополіс')">Купити</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1603157892523-6f24f5c65560?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Перга">
+          <div class="product-info">
+            <h3>Перга (пилок бджолиний)</h3>
+            <p>Джерело білка, вітамінів та енергії. Для активного способу життя.</p>
+            <p class="price">250 ₴ / 200 г</p>
+            <button onclick="openOrderForm('Перга')">Купити</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1603157892523-6f24f5c65560?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Маточне молочко">
+          <div class="product-info">
+            <h3>Маточне молочко</h3>
+            <p>Суперфуд для омолодження, підвищення працездатності.</p>
+            <p class="price">450 ₴ / 20 г</p>
+            <button onclick="openOrderForm('Маточне молочко')">Купити</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>Про нас</h2>
+      <p>Ми — сімейна бджолярська ферма зі Східної України. Вже понад 15 років ми вирощуємо бджіл без використання хімії, забезпечуючи чисті та натуральні продукти. Наш мед не пастеризований, не розбавлений та збирається в екологічно чистих районах.</p>
+      <p>Кожен продукт проходить контроль якості та має сертифікат натуральності.</p>
+    </section>
+
+    <section id="delivery" class="delivery">
+      <h2>Доставка та оплата</h2>
+      <p>🚚 Доставка по всій Україні Новою Поштою та Укрпоштою.</p>
+      <p>💳 Оплата при отриманні (наложний платіж).</p>
+      <p>📦 Відправка 1–2 рази на тиждень.</p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Замовити або задати питання</h2>
+      <p>📞 <strong>Телефон:</strong> +38 (098) 123-45-67</p>
+      <p>📧 <strong>Email:</strong> info@chystynektar.com</p>
+      <p>📍 <strong>Адреса:</strong> с. Медове, Сумська область</p>
+
+      <form action="https://formspree.io/f/xyyqzznv" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Ваше ім’я" required />
+        <input type="tel" name="phone" placeholder="Телефон" required />
+        <input type="email" name="email" placeholder="Email" />
+        <textarea name="message" placeholder="Який товар цікавить? Скільки?"></textarea>
+        <button type="submit" style="background:#4e342e; color:white;">Надіслати замовлення</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Чистий Нектар. Усі права захищено.</p>
+    <p>Сайт створено з любов’ю до природи та здорового життя.</p>
+  </footer>
+
+  <script>
+    function openOrderForm(product) {
+      document.querySelector('textarea[name="message"]').value = `Цікавить: ${product}`;
+    }
+  </script>
+</body>
+</html>
